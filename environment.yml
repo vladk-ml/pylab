@@ -11,4 +11,14 @@ dependencies:
   - torch
   - ultralytics
   - onnxruntime
-  - opencv-python 
+  - opencv-python
+  - conda-pack
+  - pip
+  - customtkinter
+  - pip:
+    - nuitka
+    - pillow
+    - numpy
+    - pytest
+    - black
+    - isort 

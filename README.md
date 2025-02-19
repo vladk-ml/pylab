@@ -1,23 +1,39 @@
-# pylab Project
+# PyLab Image Processing Tool
 
-This repository contains a basic Python executable that prints "Hello world".
+A Windows-compatible image processing application built with Python and CustomTkinter, packaged using Nuitka.
 
-## Setup
+## Development Setup
 
-1. Create the conda environment:
+1. Install Miniconda or Anaconda
+2. Create the environment:
    ```bash
    conda env create -f environment.yml
    conda activate pylab
    ```
 
-2. Run the Python script:
+## Building with Nuitka
+
+To build the application:
    ```bash
-   python main.py
+   python -m nuitka --follow-imports --enable-plugin=tk-inter --windows-disable-console --output-dir=dist main.py
    ```
 
-3. Package the script into an executable using PyInstaller:
-   ```bash
-   pyinstaller --onefile main.py
-   ```
+## Project Structure
 
-The executable will be available in the `dist` directory after packaging.
+- `src/` - Source code
+- `tests/` - Test files
+- `resources/` - Application resources
+- `dist/` - Distribution files
+
+## Development Guidelines
+
+1. Use Black for code formatting
+2. Run tests with pytest before commits
+3. Follow PEP 8 style guidelines
+
+## Features
+
+- Modern GUI with CustomTkinter
+- Image processing capabilities
+- GDAL/Rasterio integration for geospatial data
+- Single-executable deployment
